@@ -1,0 +1,6 @@
+*.zip
+*.md
+.vscode/
+*.png
+*.pdf
+*.drawio
