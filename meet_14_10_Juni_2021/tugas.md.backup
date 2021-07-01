@@ -1,0 +1,85 @@
+# Praktikum Struktur Data 6 Juni 2021
+
+## Hubungan heap tree dengan sorting
+
+Menurut saya hubungan antara heap tree dengan sorting adalah heap tree dapat juga digunakan untuk sorting. Semisal sebuah min heap tree sudah terbentuk dari banyak data lalu untuk mengurutkan dari terkecil ke yang terbesar kita hanya tinggal mengambil root satu per satu ke dalam sebuah array sampai semua data di dalam tree habis.
+
+## Perhitungan waktu untuk setiap algoritma
+
+Dengan menggunakan kode:
+```py
+import sorting
+import timeit
+
+data = [1, 8, 3, 5, 6, 9, 2, 4]
+
+start_time = timeit.default_timer()
+sorting.bubble(data)
+end_time = timeit.default_timer()
+print('Bubble Sort      : ', '%.15f' % (end_time - start_time))
+
+start_time = timeit.default_timer()
+sorting.bucket(data)
+end_time = timeit.default_timer()
+print('Bucket Sort      : ', '%.15f' % (end_time - start_time))
+
+start_time = timeit.default_timer()
+sorting.comb(data)
+end_time = timeit.default_timer()
+print('Comb Sort        : ', '%.15f' % (end_time - start_time))
+
+start_time = timeit.default_timer()
+sorting.counting(data)
+end_time = timeit.default_timer()
+print('Counting Sort    : ', '%.15f' % (end_time - start_time))
+
+start_time = timeit.default_timer()
+sorting.maxheap(data)
+end_time = timeit.default_timer()
+print('Max Heap Sort    : ', '%.15f' % (end_time - start_time))
+
+start_time = timeit.default_timer()
+sorting.minheap(data)
+end_time = timeit.default_timer()
+print('Min Heap Sort    : ', '%.15f' % (end_time - start_time))
+
+start_time = timeit.default_timer()
+sorting.merge(data)
+end_time = timeit.default_timer()
+print('Merge Sort       : ', '%.15f' % (end_time - start_time))
+
+start_time = timeit.default_timer()
+sorting.quick(data)
+end_time = timeit.default_timer()
+print('Quick Sort       : ', '%.15f' % (end_time - start_time))
+
+start_time = timeit.default_timer()
+sorting.radix(data)
+end_time = timeit.default_timer()
+print('Radix Sort       : ', '%.15f' % (end_time - start_time))
+
+start_time = timeit.default_timer()
+sorting.selection(data)
+end_time = timeit.default_timer()
+print('Selection Sort   : ', '%.15f' % (end_time - start_time))
+
+start_time = timeit.default_timer()
+sorting.cycle(data)
+end_time = timeit.default_timer()
+print('Cycle Sort       : ', '%.15f' % (end_time - start_time))
+```
+
+Didapatkan output:
+```
+Bubble Sort      :  0.000019658000383
+Bucket Sort      :  0.000028689999453
+Comb Sort        :  0.000013814000340
+Counting Sort    :  0.000036645000364
+Max Heap Sort    :  0.000028041000405
+Min Heap Sort    :  0.000020393001250
+Merge Sort       :  0.000058335001086
+Quick Sort       :  0.000037513998905
+Radix Sort       :  0.000021166999431
+Selection Sort   :  0.000012675000107
+Cycle Sort       :  0.000009507999494
+```
